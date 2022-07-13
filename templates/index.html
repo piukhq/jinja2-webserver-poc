@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <style>
+{%- filter indent(width=12) %}
+{{ css }}
+{%- endfilter %}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to the {{ title }} Rewards Page</h1>
+        <div class="row">
+            <div class="column">
+                <p>How to use the dope ass points:</p>
+                <ul>
+                    {%- for i in how_to_use %}
+                    <li>{{ i }}</li>
+                    {%- endfor %}
+                </ul>
+            </div>
+            <div class="column">
+                <p>Some dummy data:</p>
+                <p>Reward Card Number: {{ account_number }}</p>
+                <p>Reward Code: {{ reward_code }}</p>
+                <p>Valid Until: {{ valid_until }}</p>
+            </div>
+          </div>
+    </body>
+</html>
